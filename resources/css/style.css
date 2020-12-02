@@ -1,0 +1,715 @@
+
+
+/* ------------------------*/
+/* BASIC SETUP */
+/* ------------------------*/
+
+* {
+   margin: 0;
+    padding: 0;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+html,
+body {
+    background-color: #fff;
+    color: #555;
+    font-family: 'lato','arial';
+    font-weight: 300;
+    font-size: 20px;
+    text-rendering: optimizeLegibility;
+    overflow-x: hidden;
+     
+}
+
+
+/* ------------------------*/
+/* REUSABLE COMPONENTS */
+/* ------------------------*/
+
+
+.row {
+    max-width: 1140px;
+ margin: 0 auto;
+    
+}
+
+/* ------------------------*/
+/* HEADINGS */
+/* ------------------------*/
+
+
+h1 {
+    color:white;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    word-spacing: 4px;
+    font-size: 240%;
+    font-weight: 300;
+}
+
+
+/* ------------------------*/
+/* BUTTONS */
+/* ------------------------*/
+
+
+.btn:link,
+.btn:visited,
+input[type=submit]{
+   display: inline-block;
+    padding: 10px 30px;
+   
+    color:white;
+    text-decoration: none; 
+    border-radius: 200px;
+    margin-top: 15px;
+    margin-right: 20px;
+    -webkit-transition: background-color 0.4s, color 0.4s;
+    transition: background-color 0.4s, color 0.4s;
+   
+     
+}
+.btn-full:link,
+.btn-full:visited,
+input[type=submit]{
+    background-color: orange;
+     border: 1px solid red;
+  
+   
+}
+.btn-ghost:link,
+.btn-ghost:visited {
+    border:1px solid red;
+    color: orange;
+    
+   
+}
+
+.btn:hover,
+.btn:active{
+    background-color: yellow;
+       
+}
+.btn-full:hover,
+.btn-full:active,
+input[type=submit]:hover,
+input[type=submit]:active{
+    background-color: aqua;
+}
+.btn-ghost:hover,
+.btn-ghost:active {
+    border:1px solid red;
+    background-color: aqua;
+    color: white;
+      
+}
+
+/* ------------------------*/
+/* HEADER */
+/* ------------------------*/
+
+header {
+    background-image:-webkit-gradient(linear,left top, left bottom,from(rgba(0, 0, 0, 0.7)),to(rgba(0, 0, 0, 0.7))),url(img/hero.jpg);
+    background-image:linear-gradient(rgba(0, 0, 0, 0.7),rgba(0, 0, 0, 0.7)),url(img/hero.jpg);
+    height: 100vh;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    
+    
+}
+.hero-text-box {
+    width: 1140px;
+     position: absolute;
+     top: 50%;
+     left: 50%;
+    width: 1140px;
+      -webkit-transform: translate(-50%,-50%);
+      transform: translate(-50%,-50%);
+    
+}
+
+.logo {
+    height: 100px;
+    width: auto;
+    float: left;
+    margin-top: 20px;
+    
+}
+.logo-black{display:none;}/*-isliye none take bs .sticky ke andr ho jabhi dikhe-*/
+/*----------main-navi----------*/
+.main-nav {
+    float: right;
+    list-style: none;
+    margin-top: 55px;
+}
+.main-nav li{
+    display: inline-block;
+    margin-left: 40px;               
+}
+ .main-nav li a:link,
+.main-nav li a:visited {
+    padding: 8px 0px;
+    text-decoration: none;
+    color: white;
+    text-transform: uppercase;
+     font-size: 90%; 
+    -webkit-transition: border-bottom 0.2s; 
+    transition: border-bottom 0.2s;
+    border-bottom: 0;
+     
+}
+ .main-nav li a:hover,
+.main-nav li a:active {
+    border-bottom: 2px solid orange;
+    color: orange;
+}
+
+
+
+
+
+
+/*------mobile navi----------------*/
+/*- href nhi lia isliye cursor:pointer lia taki uske upr clickable ban jaye hath aa jaye*/
+.mobile-nav-icon  {
+    float:right;
+    margin-top:30px;
+    cursor: pointer;
+    display:none;
+}
+/*--isme icon ki class nhi li sabki tarah bs uske andar i lia hai*/
+.mobile-nav-icon i {
+    font-size:200%;
+    color:white;
+}
+
+
+
+
+
+
+
+/*------------sticy-nav--------*/
+/*-----float left logo me aur float-right nav me dena jaruri hai---*/
+/*-----abhi filhaal check krne ke lie nav me class dedo sticky baad me hata denge*/
+/*--z-index:9999; isliye taki soo it display over the image not behind the images.--*/ 
+.sticky{
+   position:fixed;
+    width:100%;
+    top:0;
+    left:0;
+    background-color:rgba(255, 255, 255, 0.97);
+    z-index: 9999;
+    box-shadow: 0 1px 1px black;
+}
+/*--ISKA MATLAB .STCKY KE ANDAR JAB .MAIN-NAV LI A HOGA TO JAB HI YE KAAM KRENGE--*//*VERY IMP*/
+.sticky .main-nav li a:link,
+.sticky .main-nav li a:visited {
+    color: black;
+    text-transform: uppercase; 
+}
+/*--.sticky ke andar jab logo-blak hoga to display-block or jab .sticky ke andr white logo to display:none--*/
+.sticky .logo-black {
+    display:block;
+    height: 50px;
+    width: auto;
+    float: left;
+}
+.sticky .logo{display:none;}
+
+.sticky .main-nav {
+    margin-top: 15px;
+}
+/*--------------------------------------------------------------------------------------*/
+
+/*-----Secion-features---*/
+/*---------------------*/
+
+section {
+    padding: 50px 0;
+}                                                                                                                                            
+
+h2 {
+    text-align: center;
+    text-transform: uppercase;
+    font-weight: 300;
+    word-spacing: 4px;
+    font-size: 40px;
+  
+    letter-spacing: 1px;
+}
+h3 {
+    font-size: 110%;
+    margin-bottom: 15px;
+    letter-spacing: 1px;
+    word-spacing: 4px;
+}
+
+h2:after {
+   display: block;
+    height: 2px;
+    background-color: orange;
+    content: " ";        
+    width: 100px;
+    margin: 30px auto;
+   
+}
+
+/*--paragraph*/
+.long-copy {
+   line-height: 145%;
+    width: 70%;
+    margin-left: 15%;
+   word-spacing: 1px;
+}
+.box {
+    padding: 1%;
+    
+}
+
+h3 {
+    font-size: 100%;
+    font-weight: 300;
+    margin-bottom: 15px;
+    text-transform: uppercase;
+    
+}
+.box p {
+    font-size: 80%;
+    line-height: 145%;
+    letter-spacing: 1px;
+    word-spacing: 1px;
+}
+.icon-big {
+    font-size: 350%;
+    display: block;
+    color: orange;
+    margin-bottom:10px;
+}
+/*--------------------------------------------------------------------------------------*/
+
+/*---------------------*/
+/*-----Secion-meals---*/
+/*---------------------*/
+
+.section-meals {
+    padding-bottom: 0;
+}
+
+.meals-showcase {
+    list-style: none;
+    width: 100%;
+    
+}
+.meals-showcase li {
+    display: block;
+    float: left;
+    width: 25%;
+    background-color: black;
+}
+.meals-photo {
+    width: 100%;
+ overflow: hidden;
+   
+}
+.meals-photo img {
+    opacity: 0.7;
+    width: 100%;
+    height: auto;
+    -webkit-transform: scale(1.15);
+    transform: scale(1.15);
+    -webkit-transition: opacity 0.5s, -webkit-transform 0.5s;
+    transition: opacity 0.5s, -webkit-transform 0.5s;
+    transition: transform 0.5s, opacity 0.5s;
+    transition: transform 0.5s, opacity 0.5s, -webkit-transform 0.5s;
+}
+.meals-photo img:hover {
+    -webkit-transform: scale(1.03);
+    transform: scale(1.03);
+    opacity: 1;
+}
+/*--------------------------------------------------------------------------------------*/
+
+
+/*---------------------*/
+/*-----Secion-how it works---*/
+/*---------------------*/
+
+/* h2 use krnege heading kyuki phle use kri hui hai h2
+  and h3 font , h2 ke niche kine dono aa jayegi sab--*/
+/* aur isme 1 row heading ki jisme phle se width vagera set hai,
+  aur DUSRI ROW me 2 colimns- 1 for image 2 for steps 
+margin -px , padding-% me fluid--*/
+
+
+.section-steps {
+    background-color: #f4f4f4;
+}
+
+.steps-box:first-child  {
+     margin-top: 30px;
+    text-align: right;
+    padding-right: 3%;
+}
+.steps-box:last-child{
+ padding-left: 3%;
+    margin-top: 70px;
+    
+}
+.app-screen {
+    width: 40%;
+}
+.works-steps {
+    margin-bottom: 60px;
+}
+/*-  display inline block isliye use kia div1 puri line block lega to para ke side me
+  nhi aa payega isliye inline block se jitna no hai ho jayega phir adjust h jayega -- */
+
+.works-steps div {
+    color:orange;
+    border: 2px solid orange;
+    display: inline-block; 
+    border-radius: 50%;
+    height: 50px;
+    width: 50px;
+    text-align: center;
+    padding: 5px;
+    float: left;
+    font-size: 30px;
+    margin-right: 20px;
+}
+.btn-app img {
+    height: 50px;
+    width: auto;
+    margin-left: 30px;
+}
+
+/*--reusable--*/
+/* ---clearfix class ul element me de denge meals ki aur niche phir use krenge */
+.clearfix {zoom: 1}
+.clearfix:after {
+    content: '.';
+    clear: both;
+    display: block;
+    height: 0;
+    visibility: hidden;
+}
+/*--------------------------------------------------------------------------------------*/
+
+
+/*---------------------*/
+/*-----CITIES---*/
+/*---------------------*/
+
+
+
+.city-photo {
+    width: 90%;
+}
+
+.city-features {
+    margin-bottom: 5px;
+}
+.icon-small {
+    display: inline-block;
+    width: 30px;
+    color: orange;
+font-size: 120%;
+    text-align: center;
+    margin-right: 10px;
+}
+
+/*--a is reusable link -so not taking particular class.applied for all generic links--*/
+
+a:link,
+a:visited {
+    color: orange;
+     text-decoration: none;
+     border-bottom: 1px solid orange;
+     padding-bottom: 1px;
+    -webkit-transition: border-bottom 0.2s, color 0.2s;
+    transition: border-bottom 0.2s, color 0.2s;
+}
+
+a:hover,
+a:active {
+    color: #555;
+    border-bottom: 1px solid transparent;
+    
+}
+
+/*-- as work it section me line aa rhi h button me to niche change kr rhe-*/
+
+.btn-app:link,
+.btn-app:visited {
+    border: 0;
+}
+/*--------------------------------------------------------------------------------------*/
+
+/*--------------------------------*/
+/*-----customer-testimonials----*/
+/*-------------------------------*/
+
+
+/*- background-attachment: fixed;  (img ko fix krne ke lie--)*/
+/*- vertical-align: middle; (img ke sath text middle me aa jayega)*/
+
+
+
+.section-testimonial {
+    background-image:-webkit-gradient(linear,left top, left bottom,from(rgba(0, 0, 0, 0.8)),to(rgba(0, 0, 0, 0.8))),url(img/back-customers.jpg);
+    background-image:linear-gradient(rgba(0, 0, 0, 0.8),rgba(0, 0, 0, 0.8)),url(img/back-customers.jpg);
+    background-size: cover;
+    background-attachment: fixed;
+    color: white;
+}
+blockquote  {
+    line-height: 145%;
+    margin-bottom: 20px;
+    font-style: italic;
+    position: relative;
+    margin-top: 40px;
+   
+}
+
+/*-for quotation google-"css-tricks me glyhps" copy code and paste in content-*/
+/*--we used here display block kyuki next line me lane ke lie quotation-*/
+blockquote:before {
+    content:"\201C";
+    font-size: 500%;
+    display: block; 
+    position: absolute;
+    left: -15px;
+    top: -5px;
+    color: orange;
+
+}
+cite {
+    display: block;
+    margin-top: 20px;
+    
+}
+cite img {
+    
+    height: 50px;
+    border-radius: 50%;
+    vertical-align: middle;
+    margin-right: 10px;
+}
+
+/*--------------------------------------------------------------------------------------*/
+
+/*--------------------------------*/
+/*-----sign-up----*/
+/*-------------------------------*/
+
+
+section-sign-up {
+    background-color: #f4f4f4;
+}
+.plan-box{
+    background-color: white;
+    width: 90%;
+    margin-left: 5%;
+}
+.plan-box div {
+    padding: 15px;
+    border-bottom: 1px solid #e8e8e8;
+}
+.plan-price  {
+    font-size: 300%;
+    margin-bottom: 10px;
+    font-weight: 100;
+    color: orange;
+}
+
+.plan-price-meal {
+    font-size: 80%;
+    
+}
+/*-hume /month sirf chota krna hai to span lagage kr lenge sab text se alag krne ke lie-*/
+
+.plan-price span{
+    font-size: 30%;
+    font-weight: 300;
+}
+
+.plan-box ul {
+    list-style: none;
+}
+.plan-box ul li {
+    padding: 5px 0;
+}
+
+
+/* VER-IMPORTANT---isme BUTTON OR ICON ki bhi class phle cities wale section ki same lenge
+-TAKI hume kuch krna na pade-*/
+/* button ko center align krne ke lie LAST CHILD use krnege kyuki div same hai*/
+
+.plan-box div:last-child {
+    text-align: center;
+    border: 0;
+}
+
+/* first div ko color higlight krne ke lie first child*/
+.plan-box div:first-child {
+    background-color: #fcfcfc;
+}
+
+/* IMPORTANT-- box shadow me - x axis, y axis , blurry ,color.  -*/
+
+.plan-box {
+    -webkit-box-shadow: 0px 2px 2px #efefef;
+    box-shadow: 0px 2px 2px #efefef;
+}
+
+
+/*--------------------------------------------------------------------------------------*/
+
+/*--------------------------------*/
+/*----------contact form----------*/
+/*-------------------------------*/
+
+
+
+.contact-form {
+   
+    width: 60%;
+    margin: 0 auto;
+}
+
+input[type=text],
+input[type=email],
+select,
+textarea {
+           width: 100%;
+           padding: 7px;
+    border-radius: 3px;
+    border: 1px solid #ccc;
+}
+textarea {
+    height: 100px;
+}
+
+input[type=checkbox] {
+    margin: 10px 5px 10px 0;;
+}
+/*- input[type=submit] - laga diya btns me taki same button aa jaye send it pe--*/
+
+
+*:focus{outline: none;}
+
+
+
+/*--------------------------------------------------------------------------------------*/
+
+/*--------------------------------*/
+/*----------footer--------------*/
+/*-------------------------------*/
+
+
+footer {
+    background-color: #333;
+    padding: 50px;
+}
+
+.footer-nav {
+    list-style: none;
+ 
+    float: left;
+}
+.social-links {
+    list-style: none;
+    
+    float: right;
+}
+
+.footer-nav li,
+.social-links li {
+    display: inline-block;
+    margin-right: 20px;
+}
+
+.footer-nav li a,
+.social-links li a {
+    text-decoration: none;
+    border: 0;
+    color: #888;
+    -webkit-transition: color 0.4s;
+    transition: color 0.4s;
+}
+.footer-nav li a:hover {
+    color: #ddd;
+}
+
+footer p {
+   color: #888;
+text-align: center;
+    margin-top: 30px;
+}
+
+.ion-social-facebook,
+.ion-social-twitter,
+.ion-social-googleplus,
+.ion-social-instagram {
+    -webkit-transition: color 0.5s;
+    transition: color 0.5s;
+}
+
+.social-links li a{
+    font-size: 180%;
+}
+.ion-social-facebook:hover {
+    color: #3b5998;
+}
+.ion-social-twitter:hover {
+    color: #00aced ;
+}
+.ion-social-googleplus:hover {
+    color: #dd4b39;
+}
+.ion-social-instagram:hover {
+    color:  #517fa4 ;
+}
+
+
+html{scroll-behavior: smooth;}
+
+
+
+
+
+/*------Animations-----------------------------*/
+
+/*--- animation rule--.addclass(animated fade(jo chyiye))-animated class rhegi humesha---*/
+.js--wp-1,
+.js--wp-2,
+.js--wp-3 {
+    opacity:0;
+    -webkit-animation-duration: 1s;
+    animation-duration: 1s;
+}
+.js--wp-4{-webkit-animation-duration: 1s;animation-duration: 1s;}
+
+/*-- .1 .2 - dono ke bich me gap means .2 is inside .1  ,  and in this case .1.1 - no gap  means both classes at same time and want opacity back when .animated add */ 
+.js--wp-1.animated,
+.js--wp-2.animated,
+.js--wp-3.animated,{
+    opacity: 1;
+}
+
+
+
+
+
+.ashish:link,
+.ashish:visited{
+    color:red;
+    border:0;
+}
+
+
+

@@ -1,0 +1,177 @@
+    
+    .hero-text-box {
+        
+           width: 100%;
+        padding: 0 2%;
+     
+      }
+    
+    .row { padding: 0 2%; }
+    
+    .long-copy {
+   line-height: 145%;
+    width: 90%;
+    margin-left: 5%;
+   
+      }
+    
+}
+
+
+
+
+/* small tablet to big tablet:- from 768px to1023px */
+@media only screen and (max-width: 1023px) {
+       
+    body { font-size: 18px;}
+    
+    section {padding: 60px 0;}
+    
+    
+    .plan-box{
+    width: 100%;
+        }
+    .city-features {
+        font-size: 15px;
+        
+    }
+    
+    
+    
+    .app-screen {
+    width: 60%;
+      }
+    .works-steps {
+    margin-bottom: 30px;
+      }
+    .btn-app img {
+        display: inline-block;
+    margin-left: 30px;
+        width: 40%;
+     }
+    
+    
+    
+    
+    .footer-nav {
+      width:100%;
+        }
+    footer {
+        font-size: 15px;
+   }
+    .footer-nav li {
+    display: inline-block;
+    margin-right: 10px;
+        float:left;
+     }
+}
+
+/*------------------------------------------------------------------------------------------------------------------*/
+/*meriscreenke lie mai 500px le rha hu*/
+
+@media only screen and (max-width:507px) {
+    .main-nav {display: none;}
+
+        /*--is se column ek dusre ke niche -IMPORTANT*/
+    
+         .col { width: 100%; }
+    
+    h1 {font-size: 30px;}
+    h2 {font-size: 22px;}
+    h3 {font-size: 20px;}
+    
+    
+    .steps-box:first-child{
+        width:100%;
+        text-align: center;     
+    }
+    
+    .app-screen {  width:30%; }
+    
+    
+    .city-photo { width: 70%}
+    
+    
+    input[type=text,Email]{width: 100%;}
+    
+    
+    
+    
+    
+    
+    .footer-nav{width:100%}
+   .footer-nav li  {
+       width: 20%;
+        font-size: 16px;
+       margin:0;
+       
+    }
+    .social-links  {width: 100%}
+    
+    .social-links li{
+        display:inline-block;
+        width: 10%;
+        margin-left:30px;
+        } 
+    
+    
+    
+    
+    
+    
+    
+    
+    /*--- now want navi not hidden--*/
+    /*-niche isme phle nhi dikh rha tha nav ab humne dikhayenge aur main nav ko left lake display block krenge*/
+    .mobile-nav-icon{display:inline-block;}
+    
+    .main-nav{
+        float:left;
+        margin-top:25px;
+    }
+    .main-nav li {
+        display:block;
+    }
+    /*--niche ab a link ko krenge BORDER OR HOVER NHI CHAYIYE AB kyuki MObile phone me jarurat nhi hai iski---  
+    --- or isi lie LINK < VISITED BHI LIA TAKI AISE DIKHE SIMPLE*/
+    /*--niche color:white isliye lia kyuki hover ko remove krne ko bar bar orange aa rha tha*/
+    .main-nav li a:link,
+    .main-nav li a:visited{
+        display:block;
+        border:0;
+        color:white;
+        padding: 5px 0;
+        font-size:100%;
+    }
+    
+    /*---now we do sticky navigation--*/
+    /*--.sticky .mobile-nav-icon i{color:black;}---color black kr dia phle white tha*/
+    
+    .sticky .main-nav li a:link,
+.sticky .main-nav li a:visited {
+    padding:0;
+    margin-top:0;
+}
+    .sticky .mobile-nav-icon i{color:black;}
+    .sticky .mobile-nav-icon {margin-top:10px;}
+
+    /*--unhide matlb display none upr wapas krna hai taki dikhe nhi abhi itni screen me-*/
+    
+    
+    
+    
+    
+    
+}
+
+/*------------------------------------------------------------------------------------------------------------------*/
+
+/* small phones to small tablets:- 481px to 767px */
+@media only screen and (max-width: 767px) {
+    
+}
+
+/* small phones:- from 0 to 480px */
+@media only screen and (max-width: 48px) {
+    
+}
